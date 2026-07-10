@@ -1,31 +1,39 @@
 ---
 title: "Blog 2"
-date: 2024-01-01
-weight: 1
+date: 2026-07-01
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# TÌM HIỂU AMAZON AURORA DSQL – GIẢI PHÁP CƠ SỞ DỮ LIỆU MỚI TRÊN AWS
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+Xin chào các anh chị và các bạn, trong quá trình học về AWS, mình đã tìm hiểu về Amazon Aurora DSQL, một dịch vụ cơ sở dữ liệu mới do AWS giới thiệu. Đây là một dịch vụ hướng đến việc xây dựng các ứng dụng luôn sẵn sàng hoạt động, có khả năng mở rộng lớn mà không cần quản lý hạ tầng phức tạp.
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+### Amazon Aurora DSQL là gì?
 
-Các điểm chính cần nắm:
+Amazon Aurora DSQL là cơ sở dữ liệu SQL phân tán theo mô hình serverless và tương thích với PostgreSQL. Người dùng không cần cấu hình máy chủ, nâng cấp hay bảo trì hệ thống, AWS sẽ tự động xử lý toàn bộ các công việc này.
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+### Những điểm nổi bật
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+Sau khi tìm hiểu, mình thấy Aurora DSQL có một số ưu điểm đáng chú ý:
 
-...Hình ảnh...
+- Tự động mở rộng khi lượng truy cập tăng mà không cần chia nhỏ cơ sở dữ liệu (sharding).
+- Độ sẵn sàng cao, hỗ trợ kiến trúc Active-Active giúp ứng dụng vẫn hoạt động ngay cả khi xảy ra sự cố.
+- Không cần quản lý hạ tầng, giảm đáng kể thời gian vận hành.
+- Tương thích PostgreSQL, giúp lập trình viên dễ dàng sử dụng các công cụ và thư viện quen thuộc.
 
-...Link...
+### Aurora DSQL phù hợp với ai?
 
-...Hướng dẫn...
+Theo mình, dịch vụ này phù hợp với:
+
+- Các ứng dụng web có nhiều người dùng.
+- Hệ thống microservices.
+- Ứng dụng cần khả năng mở rộng nhanh.
+- Các dự án yêu cầu hoạt động liên tục và hạn chế thời gian gián đoạn.
+
+### Kết luận
+
+Amazon Aurora DSQL là một bước tiến mới của AWS trong lĩnh vực cơ sở dữ liệu. Với khả năng mở rộng gần như không giới hạn, độ sẵn sàng cao và không cần quản lý hạ tầng, dịch vụ này hứa hẹn sẽ hỗ trợ tốt cho các ứng dụng hiện đại trong tương lai.
+
+Nguồn tham khảo: https://aws.amazon.com/vi/blogs/database/introducing-amazon-aurora-dsql/
+![](/images/3-BlogsPosted/blog2.jpg)

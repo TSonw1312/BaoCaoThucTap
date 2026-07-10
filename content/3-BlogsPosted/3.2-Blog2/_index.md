@@ -1,31 +1,39 @@
 ---
 title: "Blog 2"
-date: 2024-01-01
-weight: 1
+date: 2026-07-01
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# EXPLORING AMAZON AURORA DSQL – A NEW DATABASE SOLUTION ON AWS
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+Hello everyone, during my learning journey with AWS, I have explored Amazon Aurora DSQL, a new database service introduced by AWS. This service is designed to build highly available and massively scalable applications without the complexity of managing infrastructure.
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+### What is Amazon Aurora DSQL?
 
-Key points to know:
+Amazon Aurora DSQL is a serverless, distributed SQL database that is fully PostgreSQL-compatible. Users do not need to configure servers, handle upgrades, or perform system maintenance, as AWS automatically handles all of these operational tasks.
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+### Key Highlights
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+From my research, Aurora DSQL offers several notable advantages:
 
-...Image...
+- Automatically scales as traffic grows without the need for database splitting (sharding).
+- High availability with support for Active-Active architecture, ensuring applications remain operational even during outages.
+- No infrastructure management required, significantly reducing operational time and effort.
+- PostgreSQL compatibility, allowing developers to easily leverage familiar tools and libraries.
 
-...Link...
+### Who is Aurora DSQL for?
 
-...Guide...
+In my opinion, this service is ideal for:
+
+- Web applications with large user bases.
+- Microservices architectures.
+- Applications requiring rapid scalability.
+- Projects that demand continuous uptime and minimal service disruptions.
+
+### Conclusion
+
+Amazon Aurora DSQL represents a major advancement from AWS in the database domain. With near-infinite scalability, high availability, and zero infrastructure management, this service promises to provide excellent support for modern applications in the future.
+
+Reference Source: https://aws.amazon.com/vi/blogs/database/introducing-amazon-aurora-dsql/
+![](/images/3-BlogsPosted/blog2.jpg)

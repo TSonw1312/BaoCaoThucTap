@@ -1,59 +1,27 @@
 ---
 title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+date: 2026-06-19
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
-### Mục tiêu tuần 10:
+### Mục tiêu Tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Chuyển luồng upload file sang S3 Upload Bucket bằng presigned URL và tách import Word thành Lambda xử lý bất đồng bộ.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các nhiệm vụ cần thực hiện trong tuần này:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
+| Thứ Hai | - Tạo S3 Upload Bucket, giữ bucket private, bật SSE-S3 và ghi lại tên bucket để dùng trong biến môi trường Lambda.                                                                     | 22/06/2026 | 22/06/2026      | <https://docs.aws.amazon.com/AmazonS3/latest/userguide/> |
+| Thứ Ba | - Tạo IAM policy cho Lambda Backend API với quyền s3:PutObject và s3:GetObject trên S3 Upload Bucket.                                                                                  | 23/06/2026 | 23/06/2026      | <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html> |
+| Thứ Tư | - Code endpoint /api/uploads/presigned-url, kiểm tra uploadType, role và sinh object key theo prefix backend quyết định.                                                               | 24/06/2026 | 25/06/2026      | <https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html> |
+| Thứ Năm | - Chuyển upload avatar, ảnh lớp và ảnh đề thi/câu hỏi sang flow presigned URL phía frontend.                                                                                           | 26/06/2026 | 26/06/2026      | |
+| Thứ Sáu | - Code Lambda Import Word Processor: nhận S3 event, đọc file .docx, parse câu hỏi và lưu vào MongoDB Atlas.                                                                             | 27/06/2026 | 28/06/2026      | <https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html> |
 
 
-### Kết quả đạt được tuần 10:
+### Kết quả đạt được trong Tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+* Presigned URL hoạt động cho các luồng upload chính, file được lưu đúng prefix S3 và Lambda Import Word có thể parse file .docx và lưu câu hỏi vào MongoDB.
 * ...
-
-

@@ -1,125 +1,148 @@
 ---
 title: "Event 1"
-date: 2024-01-01
+date: 2026-06-06
 weight: 1
 chapter: false
-pre: " <b> 4.1. </b> "
+pre: " <b>4.1.</b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Báo cáo tổng kết: “AWS Cloud Journey Community Day - 2026”
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+### Mục tiêu của sự kiện
 
-### Mục Đích Của Sự Kiện
+- Giới thiệu lộ trình phát triển nghề nghiệp trong lĩnh vực Cloud Computing, Infrastructure và DevOps.
+- Chia sẻ những kiến thức nền tảng về Docker, Virtualization và Containerization.
+- Minh họa cách các dịch vụ AWS được ứng dụng trong bảo mật, phát triển game và trí tuệ nhân tạo.
+- Giúp sinh viên có cái nhìn tổng quan về kiến trúc hệ thống trên nền tảng đám mây thông qua các ví dụ thực tế.
+- Khuyến khích tinh thần học tập, thực hành và phát triển lâu dài trong lĩnh vực Cloud.
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+### Diễn giả
 
-### Danh Sách Diễn Giả
+- **Lê Hoàng Gia Đại** – Sinh viên năm cuối Đại học HUTECH & Thành viên FCJ.
+- **Bao Huynh** – Junior Cloud Native Developer tại Endava Vietnam & Founder/Head of ITea Lab.
+- **Trần Trung Vinh** – System Administrator tại Central Retail Group.
+- **Nguyễn Quốc Bảo** – Cloud Engineering Specialist & Godot Integration Expert.
+- **Trương Huy Phước** – Team Dynamics Specialist & Operations Advisor.
+- **Việt Phát** – Sinh viên ngành AI tại Swinburne University of Technology.
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+### Những nội dung nổi bật
 
-### Nội Dung Nổi Bật
+#### Lộ trình phát triển trong lĩnh vực Cloud và DevOps
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+- Hiểu rằng nhiều kỹ sư Cloud hiện nay đều bắt đầu từ những vị trí cơ bản như IT Helpdesk hoặc System Administrator.
+- Nhận thấy tầm quan trọng của việc học vững Linux, mạng máy tính và kỹ năng lập trình script.
+- Biết được rằng kinh nghiệm thực tế và các dự án cá nhân có giá trị hơn việc chỉ sở hữu nhiều chứng chỉ.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### Tìm hiểu về Docker và Container
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+- Phân biệt được sự khác nhau giữa Virtual Machine và Container.
+- Hiểu cách Docker đóng gói ứng dụng cùng toàn bộ thư viện và môi trường cần thiết để chạy trên nhiều hệ thống khác nhau.
+- Biết Docker sử dụng cơ chế Layer giúp tối ưu quá trình build và triển khai ứng dụng.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+#### Bảo mật trên nền tảng AWS
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+- Làm quen với AWS WAF và cách dịch vụ này giúp bảo vệ ứng dụng web khỏi các cuộc tấn công phổ biến.
+- Tìm hiểu cách Machine Learning hỗ trợ phát hiện các hành vi bất thường trong lưu lượng mạng.
+- Hiểu rằng việc kết hợp nhiều dịch vụ AWS sẽ tạo nên một hệ thống bảo mật hiệu quả hơn.
 
-#### Domain-Driven Design (DDD)
+#### Ứng dụng Serverless
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+- Biết được cách AWS Lambda thực thi chương trình mà không cần quản lý máy chủ.
+- Hiểu vai trò của WebSocket trong các ứng dụng yêu cầu giao tiếp thời gian thực như game hoặc chat.
+- Làm quen với Amazon DynamoDB trong việc lưu trữ dữ liệu kết nối của người dùng.
 
-#### Event-Driven Architecture
+#### AI và GraphRAG
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+- Tìm hiểu những hạn chế của mô hình RAG truyền thống.
+- Hiểu sơ lược về GraphRAG và cách sử dụng mối quan hệ giữa các dữ liệu để nâng cao chất lượng câu trả lời của AI.
+- Được giới thiệu về Amazon Bedrock và Amazon Neptune.
 
-#### Compute Evolution
+#### Làm việc nhóm và kỹ năng mềm
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+- Nhận thấy giao tiếp là yếu tố rất quan trọng trong các dự án phần mềm.
+- Hiểu rằng việc phân chia công việc rõ ràng sẽ giúp nhóm làm việc hiệu quả hơn.
+- Làm quen với một số công cụ hỗ trợ cộng tác như Trello, Slack, Discord và Google Workspace.
 
-#### Amazon Q Developer
+### Những điều rút ra
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+#### Tư duy học tập
 
-### Những Gì Học Được
+- Nên tập trung xây dựng kiến thức nền tảng trước khi học các công nghệ nâng cao.
+- Thực hành thường xuyên sẽ giúp ghi nhớ và hiểu kiến thức tốt hơn.
+- Quá trình phát triển nghề nghiệp cần thời gian, sự kiên trì và kinh nghiệm thực tế.
 
-#### Tư Duy Thiết Kế
+#### Kiến thức kỹ thuật
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+- Docker giúp việc triển khai ứng dụng trở nên đơn giản và thuận tiện hơn.
+- Serverless giúp giảm đáng kể công việc quản lý hạ tầng.
+- Bảo mật hệ thống cần kết hợp nhiều giải pháp thay vì chỉ phụ thuộc vào một công nghệ.
+- AI đang trở thành một phần quan trọng trong quá trình phát triển phần mềm hiện đại.
 
-#### Kiến Trúc Kỹ Thuật
+#### Phát triển bản thân
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+- Ai cũng bắt đầu từ những kiến thức cơ bản.
+- Không ngừng học hỏi và xây dựng các dự án cá nhân sẽ giúp nâng cao kỹ năng.
+- Bên cạnh chuyên môn, kỹ năng giao tiếp và làm việc nhóm cũng rất cần thiết.
 
-#### Chiến Lược Hiện Đại Hóa
+### Áp dụng vào học tập và công việc
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+- Thực hành Docker trong các dự án cá nhân.
+- Tiếp tục học AWS thông qua các bài Lab cơ bản.
+- Tìm hiểu thêm về mô hình Serverless với AWS Lambda.
+- Nghiên cứu thêm các kiến thức về bảo mật trên nền tảng Cloud.
+- Áp dụng các công cụ quản lý công việc vào các đồ án và bài tập nhóm.
 
-### Ứng Dụng Vào Công Việc
+### Trải nghiệm tại sự kiện
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+Tham gia **"AWS Cloud Journey Community Day - 2026"** là một trải nghiệm rất bổ ích đối với em khi mới bắt đầu tìm hiểu về Cloud Computing. Mặc dù nhiều nội dung còn khá mới, nhưng các diễn giả đã trình bày dễ hiểu và kết hợp với nhiều ví dụ thực tế giúp em tiếp cận kiến thức thuận lợi hơn.
 
-### Trải nghiệm trong event
+#### Học hỏi từ các diễn giả
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+- Em rất ấn tượng với những câu chuyện chia sẻ về quá trình phát triển nghề nghiệp của các diễn giả.
+- Qua đó em hiểu rằng việc bắt đầu từ những vị trí cơ bản không phải là trở ngại nếu luôn duy trì tinh thần học hỏi.
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+#### Tiếp cận những kiến thức mới
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+- Đây là lần đầu tiên em được tìm hiểu về Docker, AWS Lambda, GraphRAG, Amazon Bedrock và nhiều dịch vụ AWS khác.
+- Dù chưa thể hiểu toàn bộ chi tiết kỹ thuật nhưng em đã có cái nhìn tổng quan hơn về cách các công nghệ này được ứng dụng trong thực tế.
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+#### Quan sát các ví dụ thực tế
 
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+- Các phần trình diễn trực tiếp giúp em dễ hình dung hơn về cách hoạt động của hệ thống Cloud.
+- Việc quan sát các dịch vụ AWS phối hợp với nhau giúp em hiểu rằng Cloud không chỉ là lưu trữ dữ liệu mà còn là một hệ sinh thái rất rộng.
+
+#### Động lực học tập
+
+- Sau sự kiện, em có thêm động lực để tiếp tục học Linux, Docker và AWS.
+- Em cũng nhận ra rằng muốn theo đuổi lĩnh vực Cloud cần phải học tập và thực hành trong thời gian dài.
 
 #### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+- Luôn xây dựng nền tảng kiến thức vững chắc trước khi tiếp cận các công nghệ nâng cao.
+- Chủ động thực hành thay vì chỉ học lý thuyết.
+- Không ngại bắt đầu từ con số 0 vì mọi chuyên gia đều từng là người mới.
+- Kiên trì học hỏi và tích lũy kinh nghiệm qua từng dự án nhỏ.
+
+#### Một số hình ảnh tại sự kiện
+
+<p align="center">
+    <img src="1783683972950_2088812899270591419_2174945698042172265_feff87d210e832ae506160ccf96f4777.jpg" width="700">
+</p>
+
+<p align="center">
+    <img src="1783683973017_2088812899270591419_2174945698042172265_4a33f548eaa628813a79059befd5e825.jpg" width="700">
+</p>
+
+<p align="center">
+    <img src="1783683973123_2088812899270591419_2174945698042172265_6cfebf1aef8396876b8c38182c30418a.jpg" width="700">
+</p>
+
+<p align="center">
+    <img src="1783683973467_2088812899270591419_2174945698042172265_5b6956790b0b4b00309b2ef61a851b25.jpg" width="700">
+</p>
+
+<p align="center">
+    <img src="1783683973685_2088812899270591419_2174945698042172265_9763a7c36764d39c413dfe0a945500b1.jpg" width="700">
+</p>
+
+> Nhìn chung, sự kiện đã giúp em có cái nhìn tổng quan hơn về Cloud Computing cũng như những công nghệ hiện đại đang được sử dụng trong thực tế. Mặc dù vẫn còn nhiều kiến thức cần tiếp tục học hỏi, nhưng đây là một trải nghiệm rất ý nghĩa, giúp em có thêm động lực và định hướng rõ ràng hơn cho con đường phát triển trong lĩnh vực Cloud trong tương lai.

@@ -1,126 +1,147 @@
 ---
 title: "Event 1"
-date: 2024-01-01
+date: 2026-06-06
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
-
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Summary Report: “AWS Cloud Journey Community Day - 2026”
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Introduce career roadmaps in Cloud Computing, Infrastructure, and DevOps.
+- Share foundational knowledge about Docker, Virtualization, and Containerization.
+- Demonstrate how AWS services are applied in security, game development, and artificial intelligence.
+- Provide students with an overview of cloud system architecture through real-world examples.
+- Encourage a spirit of learning, hands-on practice, and long-term development in the Cloud domain.
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Le Hoang Gia Dai** – Final-year Student at HUTECH University & FCJ Member.
+- **Bao Huynh** – Junior Cloud Native Developer at Endava Vietnam & Founder/Head of ITea Lab.
+- **Tran Trung Vinh** – System Administrator at Central Retail Group.
+- **Nguyen Quoc Bao** – Cloud Engineering Specialist & Godot Integration Expert.
+- **Truong Huy Phuoc** – Team Dynamics Specialist & Operations Advisor.
+- **Viet Phat** – AI Student at Swinburne University of Technology.
 
 ### Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+#### Career Roadmap in Cloud and DevOps
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+- Realized that many current Cloud engineers start from foundational roles like IT Helpdesk or System Administrator.
+- Recognized the importance of mastering Linux, computer networking, and scripting skills.
+- Understood that hands-on experience and personal projects hold more value than simply accumulating multiple certifications.
 
-#### Transitioning to modern application architecture – Microservices
+#### Understanding Docker and Containers
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+- Differentiated between Virtual Machines and Containers.
+- Understood how Docker packages an application along with all its necessary libraries and environments to run seamlessly across different systems.
+- Learned about Docker's layered mechanism, which optimizes the image building and deployment process.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+#### Security on the AWS Platform
 
-#### Domain-Driven Design (DDD)
+- Got introduced to AWS WAF and how it helps protect web applications from common exploits.
+- Explored how Machine Learning assists in detecting anomalies within network traffic.
+- Understood that combining multiple AWS services creates a more robust and effective security system.
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+#### Serverless Applications
 
-#### Event-Driven Architecture
+- Learned how AWS Lambda executes code without the need for server management.
+- Understood the role of WebSockets in applications requiring real-time communication, such as gaming or chat applications.
+- Got familiar with Amazon DynamoDB for storing user connection data.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+#### AI and GraphRAG
 
-#### Compute Evolution
+- Explored the limitations of traditional RAG models.
+- Gained a brief understanding of GraphRAG and how utilizing relationships between data points enhances the quality of AI responses.
+- Received an introduction to Amazon Bedrock and Amazon Neptune.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+#### Teamwork and Soft Skills
 
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- Recognized that communication is a crucial factor in software projects.
+- Understood that clear task delegation helps a team work more efficiently.
+- Got familiar with collaboration tools such as Trello, Slack, Discord, and Google Workspace.
 
 ### Key Takeaways
 
-#### Design Mindset
+#### Learning Mindset
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+- Focus on building foundational knowledge before moving on to advanced technologies.
+- Regular hands-on practice helps reinforce memory and deepen understanding.
+- Career growth requires time, persistence, and practical experience.
 
-#### Technical Architecture
+#### Technical Knowledge
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+- Docker makes application deployment much simpler and more convenient.
+- Serverless significantly reduces infrastructure management overhead.
+- System security requires a combination of multiple solutions rather than relying on a single technology.
+- AI is becoming an essential part of modern software development.
 
-#### Modernization Strategy
+#### Personal Development
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+- Everyone starts from the basics.
+- Continuous learning and building personal projects are key to upgrading skills.
+- Alongside technical expertise, communication and teamwork skills are equally indispensable.
 
-### Applying to Work
+### Practical Application to Studies and Work
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- Practice using Docker in personal projects.
+- Continue learning AWS through basic hands-on labs.
+- Further explore the Serverless architecture with AWS Lambda.
+- Research deeper into cloud security practices.
+- Apply project management tools to university assignments and teamwork.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Attending **"AWS Cloud Journey Community Day - 2026"** was a highly rewarding experience for me as a beginner in Cloud Computing. Although much of the content was quite new, the speakers delivered it in an easy-to-understand manner, using real-world examples that made the knowledge highly accessible.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+#### Learning from the Speakers
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+- I was deeply impressed by the career journey stories shared by the speakers.
+- From this, I realized that starting from entry-level positions is not an obstacle as long as one maintains a continuous learning mindset.
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+#### Gaining New Knowledge
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+- This was the first time I learned about Docker, AWS Lambda, GraphRAG, Amazon Bedrock, and various other AWS services.
+- Even though I couldn't grasp every single technical detail, I walked away with a comprehensive overview of how these technologies are applied in reality.
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+#### Observing Real-world Examples
 
-#### Some event photos
-*Add your event photos here*  
+- The live demonstrations made it much easier to visualize how a Cloud system operates.
+- Watching different AWS services work together helped me realize that the Cloud is not just about data storage, but a massive ecosystem.
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+#### Motivation to Learn
+
+- Following the event, I feel highly motivated to continue studying Linux, Docker, and AWS.
+- I also recognize that pursuing the Cloud path requires a long-term commitment to learning and practicing.
+
+#### Lessons Learned
+
+- Always build a rock-solid foundation before diving into advanced technologies.
+- Take initiative with hands-on practice instead of just passive theoretical learning.
+- Never be afraid to start from scratch, as every expert was once a beginner.
+- Stay persistent and accumulate experience through every small project.
+
+#### Event Photos
+
+<p align="center">
+    <img src="1783683972950_2088812899270591419_2174945698042172265_feff87d210e832ae506160ccf96f4777.jpg" width="700">
+</p>
+
+<p align="center">
+    <img src="1783683973017_2088812899270591419_2174945698042172265_4a33f548eaa628813a79059befd5e825.jpg" width="700">
+</p>
+
+<p align="center">
+    <img src="1783683973123_2088812899270591419_2174945698042172265_6cfebf1aef8396876b8c38182c30418a.jpg" width="700">
+</p>
+
+<p align="center">
+    <img src="1783683973467_2088812899270591419_2174945698042172265_5b6956790b0b4b00309b2ef61a851b25.jpg" width="700">
+</p>
+
+<p align="center">
+    <img src="1783683973685_2088812899270591419_2174945698042172265_9763a7c36764d39c413dfe0a945500b1.jpg" width="700">
+</p>
+
+> Overall, the event provided me with a comprehensive overview of Cloud Computing as well as modern technologies used in practice. Although there is still a lot of knowledge left to learn, this was a highly meaningful experience that gave me further motivation and a clearer direction for my future career development path in the Cloud field.

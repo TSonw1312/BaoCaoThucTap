@@ -1,31 +1,20 @@
 ---
 title: "Blog 1"
-date: 2024-01-01
+date: 2026-06-30
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# AUTOMATING CROSS-ACCOUNT DATA REFRESH FOR AMAZON RDS MULTI-AZ DB CLUSTERS
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
-
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+When operating multiple environments (production, staging, testing) across separate AWS accounts, updating the latest data from production to the remaining environments usually requires significant manual effort and poses potential risks of human error. This article on the AWS Database Blog guides you on how to build a serverless pipeline to automate the entire data refresh process for Amazon RDS Multi-AZ DB Clusters between two AWS accounts.
 
 Key points to know:
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+* **Bypassing snapshot sharing limitations:** Amazon RDS supports cross-account snapshot sharing for standard DB instances, but does not directly support it for Multi-AZ DB Clusters. The workaround addresses this limitation by restoring the cluster snapshot into a temporary Single-AZ DB instance, then creating an instance snapshot from that instance to share cross-account.
+* **Automated orchestration using AWS Lambda, Step Functions, and EventBridge:** The entire process consists of seven steps spanning two accounts, automated and orchestrated with just a single trigger. AWS Lambda handles specific tasks such as creating snapshots, restoring instances, and sharing snapshots; AWS Step Functions manages the wait loops and status checks; Amazon EventBridge acts as a bridge, forwarding success events from the source account to the destination account to automatically trigger the next step.
+* **End-to-end security via AWS KMS:** The source cluster must be encrypted with a customer-managed KMS key from the beginning. When the snapshot is shared and copied to the destination account, the data will be decrypted and re-encrypted using the destination account's exact KMS key, ensuring the data is always protected throughout its journey between the two accounts.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+Article Link: https://aws.amazon.com/vi/blogs/database/automating-cross-account-refresh-for-amazon-rds-multi-az-db-clusters/
 
-...Image...
-
-...Link...
-
-...Guide...
+![](/images/3-BlogsPosted/blog1.jpg)

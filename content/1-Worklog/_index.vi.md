@@ -1,40 +1,33 @@
 ---
 title: "Nhật ký công việc"
-date: 2024-01-01
+date: 2026-07-05
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Thông thường, nhật ký công việc được thực hiện trong khoảng 3 tháng (xuyên suốt thời gian thực tập) với nội dung từng tuần như sau:
 
-**Trong trang này** bạn sẽ cần giới thiệu worklog của bạn **như thế nào**? Bạn hoàn thành chương trình trong vòng **bao nhiêu tuần**? Bạn **đã làm gì** trong các tuần đó?
+**Tuần 1:** Tìm hiểu các khái niệm cơ bản về điện toán đám mây, hạ tầng AWS, tạo tài khoản AWS và thiết lập AWS CLI.
 
+**Tuần 2:** Tìm hiểu quản lý danh tính và phân quyền với AWS IAM, áp dụng nguyên tắc phân quyền tối thiểu và cấu hình AWS Budgets để theo dõi chi phí.
 
-Thông thường và cũng là tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung các tuần như sau:
+**Tuần 3:** Nghiên cứu hệ thống mạng Amazon VPC, bao gồm subnet, định tuyến, security group, network ACL và cấu hình bảo mật mạng cơ bản.
 
-**Tuần 1:** [Làm quen với AWS và các dịch vụ cơ bản trong AWS](1.1-week1/)
+**Tuần 4:** Tìm hiểu các dịch vụ lưu trữ của AWS, triển khai website tĩnh bằng Amazon S3 và nghiên cứu Amazon EBS, Amazon EFS.
 
-**Tuần 2:** [Làm công việc A...](1.2-week2/)
+**Tuần 5:** Triển khai máy chủ ảo Amazon EC2, quản lý cơ sở dữ liệu Amazon RDS và tìm hiểu Auto Scaling cùng Elastic Load Balancing.
 
-**Tuần 3:** [Làm công việc B...](1.3-week3/)
+**Tuần 6:** Xây dựng hệ thống Backend Serverless bằng AWS Lambda và Amazon API Gateway, đồng thời triển khai các RESTful API.
 
-**Tuần 4:** [Làm công việc C...](1.4-week4/)
+**Tuần 7:** Tìm hiểu Amazon DynamoDB, triển khai xác thực người dùng bằng Amazon Cognito và quản lý danh tính người dùng.
 
-**Tuần 5:** [Làm công việc D...](1.5-week5/)
+**Tuần 8:** Tích hợp Frontend với hệ thống Serverless Backend, nghiên cứu các dịch vụ giám sát và bảo mật của AWS, đồng thời hoàn thiện kiến trúc AWS Serverless Hybrid.
 
-**Tuần 6:** [Làm công việc E...](1.6-week6/)
+**Tuần 9:** Di chuyển Express Backend lên AWS Lambda, triển khai xác thực bằng Amazon Cognito và Amazon SES, đồng bộ dữ liệu người dùng với MongoDB và bảo vệ API bằng API Gateway JWT Authorizer.
 
-**Tuần 7:** [Làm công việc G...](1.7-week7/)
+**Tuần 10:** Triển khai tải tệp lên Amazon S3 bằng Presigned URL, xây dựng Lambda xử lý bất đồng bộ việc import tệp Word và lưu dữ liệu vào MongoDB.
 
-**Tuần 8:** [Làm công việc H...](1.8-week8/)
+**Tuần 11:** Triển khai cơ chế chấm điểm bất đồng bộ bằng Amazon SQS và AWS Lambda Grading Worker, cấu hình Dead Letter Queue (DLQ) và giám sát bằng Amazon CloudWatch.
 
-**Tuần 9:** [Làm công việc I...](1.9-week9/)
-
-**Tuần 10:** [Làm công việc L...](1.10-week10/)
-
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
-
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
+**Tuần 12:** Triển khai Frontend lên AWS Amplify Hosting, cấu hình Route 53 và CORS, kiểm thử toàn bộ hệ thống, rà soát bảo mật và hoàn thiện tài liệu đề xuất dự án cùng báo cáo Workshop.
