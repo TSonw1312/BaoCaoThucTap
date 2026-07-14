@@ -1,6 +1,6 @@
-baseURL = "https://TSonw1312.github.io/BaoCaoThucTap/"
-relativeURLs = false
-canonifyURLs = false
+baseURL = "https://tsonw1312.github.io/BaoCaoThucTap/"
+relativeURLs = true
+canonifyURLs = true
 defaultContentLanguage = "en"
 
 # Change the default theme to be use when building the site with Hugo
